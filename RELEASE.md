@@ -9,3 +9,7 @@
 # 1.2.0
 
 - Implement frontend
+
+# 1.2.1
+
+- Add finishing touches/fixes
