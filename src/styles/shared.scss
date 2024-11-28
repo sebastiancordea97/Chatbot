@@ -1,0 +1,25 @@
+
+$white: #fff;
+$light: #f3f3f6;
+$dark: #18181a;
+$grey: #808080;
+$light-gray: #D3D3D3;
+$light-blue: #E8F6FF;
+$lseg-blue: #001EFE;
+$dark-blue: #0011ac;
+
+.text-white {
+    color: $light;
+}
+
+.text-gray {
+    color: $grey;
+}
+
+.text-lseg {
+    color: $lseg-blue;
+}
+
+.background-lseg {
+    background-color: $lseg-blue;
+}

@@ -1,0 +1,145 @@
+@use "./shared.scss" as shared;
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.list-item-disabled{
+  display: flex;
+  justify-content: center;
+  background-color: shared.$white;
+  padding: 5px 50px;
+  margin: 2px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+
+.list-item{
+  display: flex;
+  justify-content: center;
+  background-color: shared.$white;
+  padding: 5px 50px;
+  margin: 2px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+
+.list-item:hover {
+  background-color: shared.$light-gray;
+  cursor: pointer;
+}
+
+.selected-option {
+  background-color: shared.$light-gray;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 90vw;
+  max-width: 600px;
+  height: 70vh;
+  max-height: 1000px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px 10px 0px 0px;
+  height: 50px;
+  padding: 5px 5px 5px 15px;
+}
+
+.chat-body {
+  padding: 15px;
+  min-height: 400px;
+  overflow-y: auto;
+  border: 1px solid shared.$light;
+}
+
+.chat-footer {
+  background-color: shared.$light;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.search-input {
+  all: unset;
+  width: 90%;
+}
+
+.footer-button{
+  all: unset;
+  cursor: pointer;
+}
+
+.footer-button img {
+  display: block;
+}
+
+.clear-button:hover {
+  transform: scale(0.5);
+}
+
+.bot-initial-message {
+  padding: 10px;
+  background-color: shared.$light-blue;
+  border-radius: 5px 5px 5px 0px;
+}
+
+.bot-conversation-container {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.bot-conversation-image {
+  padding: 5px;
+  background-color: shared.$light-blue;
+  border-radius: 50px;
+}
+
+.bot-conversation-message {
+  padding: 10px;
+  background-color: shared.$light-blue;
+  border-radius: 5px 5px 5px 0px;
+}
+
+.user-conversation-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.user-conversation-message {
+  padding: 10px;
+  border-radius: 5px 5px 0px 5px;
+  background-color: shared.$light;
+}
+
+
+.suggestions-list {
+  border: 1px solid shared.$light;
+  max-height: 150px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion.active {
+  background-color: shared.$lseg-blue;
+  color: white;
+}
