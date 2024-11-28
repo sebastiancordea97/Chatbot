@@ -1,13 +1,13 @@
 # Chatbot
-- A chatbot built using React.js for the frontend and Express.js for the backend. It enables the user to select exchanges and see the prices for their tops stocks
+- A chatbot built using React.js for the frontend and Express.js for the backend. It enables users to select exchanges and view the prices of their top stocks.
 
 # Nice to know
-- For simplicity purpose the backend resides in the server folder
-- Features the chat:
-  - Saved conversation in local storage with limit and clear history "🗑️"
-  - Options can be selected by click and input text
-  - Suggestions on typing
-  - Error handling for server unavailable, invalid data, user invalid input, etc.
+- For simplicity, the backend resides in the server folder.
+- Chat features:
+  - Saved conversation in local storage with a limit and an option to clear history "🗑️".
+  - Options can be selected via click or text input.
+  - Suggestions appear while typing.
+  - Error handling for scenarios like server unavailability, invalid data, or user input errors.
  
 # Resources
 - https://react.dev/learn
@@ -24,9 +24,9 @@
 
 # How to run
 1. Backend:
-   - Go to server folder
-   - rename "example.env" -> ".env"
-   - npm install
+   - Navigate to the server folder.
+   - Rename example.env to .env.
+   - npm install.
    - npm run (start | dev )
 2. Frontend:
    - npm install
