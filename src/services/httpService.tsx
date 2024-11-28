@@ -2,7 +2,7 @@ import axios from 'axios';
 import axiosRetry from 'axios-retry';
 
 const httpService = axios.create({
-    baseURL: 'https://chatbot-u2zl.onrender.com',
+    baseURL: 'http://localhost:3000',
     timeout: 10000,
 });
 
