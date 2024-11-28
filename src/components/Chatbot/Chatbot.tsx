@@ -87,7 +87,6 @@ const Chatbot = (): JSX.Element => {
       if (Array.isArray(parsedConversation)) {
         setConversation(parsedConversation);
       }
-      console.log(conversation);
       handleTyping(chatbotConstants.availableConversation);
     } else {
       handleTyping(chatbotConstants.initialMessage);
