@@ -30,5 +30,5 @@
    - npm run (start | dev )
 2. Frontend:
    - npm install
-   - nom run dev
+   - npm run dev
 3. The application is hosted on https://sebastian-chatbot-backend.netlify.app/
