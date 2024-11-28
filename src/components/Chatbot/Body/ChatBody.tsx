@@ -12,7 +12,7 @@ import { ChatState, ChatHandlers } from "../../../types/chatbot";
 const ChatBody = (props: {
   chatStateProp: ChatState;
   chatHandlersProp: ChatHandlers;
-}): JSX.Element => {
+}) => {
   const {
     exchanges,
     selectedExchangeName,

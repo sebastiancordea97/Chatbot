@@ -1,7 +1,7 @@
 import "./styles/App.scss";
 import { useState } from "react";
 import Chatbot from "./components/Chatbot/Chatbot";
-function App(): JSX.Element {
+function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const toggleChat = (): void => {
     setIsChatOpen(!isChatOpen);

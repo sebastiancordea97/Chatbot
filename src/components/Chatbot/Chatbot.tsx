@@ -14,8 +14,9 @@ import Exchange from "../../models/exchange";
 import chatbotConstants from "../../constants/chatbot";
 import chatbotUtils from "../../utils/chatbot";
 import { AxiosResponse } from "axios";
+import Stock from "../../models/stocks";
 
-const Chatbot = (): JSX.Element => {
+const Chatbot = () => {
   const [conversation, setConversation] = useState<Message[]>([]);
   const [exchanges, setExchanges] = useState<Exchange[]>([]);
   const [startConversation, setStartConversation] = useState<boolean>(false);
@@ -33,7 +34,15 @@ const Chatbot = (): JSX.Element => {
     setConversation((prevConversation) => [...prevConversation, message]);
   };
 
-  const handleGoBack = (nextMenuItem: MenuItem) => (): void => {
+  const handleGoBack = (nextMenuItem: MenuItem, stock?: Stock) => (): void => {
+    if(activeMenuItem === MenuItem.stockPrice) {
+      addNextMessage({
+        sender: Sender.bot,
+        content: `Stock price of ${stock?.stockName} is ${stock?.price}$.`,
+        isValid: true,
+        fromMenu: MenuItem.stockPrice,
+      });
+    }
     addNextMessage({
       sender: Sender.user,
       content: `Back to ${nextMenuItem}`,
