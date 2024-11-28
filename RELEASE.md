@@ -4,4 +4,8 @@
 
 # 1.1.0
 
-- Implement Backend
+- Implement backend
+
+# 1.2.0
+
+- Implement frontend
