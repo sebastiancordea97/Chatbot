@@ -4,12 +4,12 @@ import { MenuItem } from "../../../enums/chatbot";
 import Stock from "../../../models/stocks";
 
 const StocksMenu = (props: {
-  stocks: Stock[],
-  active: boolean,
-  message: Message | null,
-  handleGoBack(nextMenuItem: MenuItem): ()=> void,
-  handleOptionClick: (exchange: string) => () => void,
-}): JSX.Element => {
+  stocks: Stock[];
+  active: boolean;
+  message: Message | null;
+  handleGoBack(nextMenuItem: MenuItem, stock?: Stock): () => void;
+  handleOptionClick: (exchange: string) => () => void;
+}) => {
   return (
     <div className="bot-conversation-container">
       <img
@@ -41,16 +41,24 @@ const StocksMenu = (props: {
               </li>
             </>
           ) : (
-            props.stocks.map((stock) => (
-              <li
-                className={`text-gray list-item-disabled ${
-                  stock.stockName === props.message?.content ? "selected-option" : ""
-                }`}
-                key={stock.stockName}
-              >
-                {stock.stockName}
-              </li>
-            ))
+            <>
+              {props.stocks.length === 0 ? (
+                <span className="text-gray list-item-disabled selected-option">{props.message?.content}</span>
+              ) : (
+                props.stocks.map((stock) => (
+                  <li
+                    className={`text-gray list-item-disabled ${
+                      stock.stockName === props.message?.content
+                        ? "selected-option"
+                        : ""
+                    }`}
+                    key={stock.stockName}
+                  >
+                    {stock.stockName}
+                  </li>
+                ))
+              )}
+            </>
           )}
         </ul>
       </div>

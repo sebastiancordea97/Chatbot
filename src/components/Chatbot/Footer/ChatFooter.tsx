@@ -9,7 +9,7 @@ import chatbotUtils from "../../../utils/chatbot";
 const ChatFooter = (props: {
   chatStateProp: ChatState;
   chatHandlersProp: ChatHandlers;
-}): JSX.Element => {
+}) => {
   const {
     exchanges,
     selectedExchangeName,

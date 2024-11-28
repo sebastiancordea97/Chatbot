@@ -7,8 +7,8 @@ const StockPriceMenu = (props: {
   stock: Stock;
   active: boolean;
   message: Message | null;
-  handleGoBack: (nextMenuItem: MenuItem) => () => void;
-}): JSX.Element => {
+  handleGoBack: (nextMenuItem: MenuItem, stock?: Stock) => () => void;
+}) => {
   return (
     <div className="bot-conversation-container">
       <img
@@ -29,7 +29,8 @@ const StockPriceMenu = (props: {
             <li
               className="text-gray list-item"
               onClick={props.handleGoBack(
-                MenuItem.stocks
+                MenuItem.stocks,
+                props.stock
               )}
             >
               Back to stocks
@@ -37,7 +38,8 @@ const StockPriceMenu = (props: {
             <li
               className="text-gray list-item"
               onClick={props.handleGoBack(
-                MenuItem.exchanges
+                MenuItem.exchanges,
+                props.stock
               )}
             >
               Back to exchanges

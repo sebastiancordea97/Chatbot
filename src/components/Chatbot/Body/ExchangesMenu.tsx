@@ -7,7 +7,7 @@ const ExchangesMenu = (props: {
   active: boolean;
   message: Message | null;
   handleOptionClick: (exchange: string) => () => void;
-}): JSX.Element => {
+}) => {
   return (
     <div className="bot-conversation-container">
       <img
