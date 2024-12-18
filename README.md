@@ -11,7 +11,6 @@
  
 # Resources
 - https://react.dev/learn
-- https://www.lseg.com/en/about-us/business-partnerships-marketplace/brand-assets-and-guidelines
 - https://axios-http.com/docs/intro
 - https://www.npmjs.com/package/axios-retry
 - https://create-react-app.dev/docs/adding-a-sass-stylesheet/
@@ -31,4 +30,3 @@
 2. Frontend:
    - npm install
    - npm run dev
-3. The application is hosted on https://sebastian-chatbot-backend.netlify.app/
